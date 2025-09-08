@@ -1,0 +1,31 @@
+{
+  "name": "ai-powered-dictionary",
+  "version": "1.0.0",
+  "description": "A Chrome extension that provides instant word definitions, synonyms, examples, and AI-powered explanations",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'No build process needed - extension files are ready to use'",
+    "lint": "echo 'Linting not configured - check files manually'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "dictionary",
+    "ai",
+    "openai",
+    "vocabulary",
+    "education"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-powered-dictionary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-powered-dictionary/issues"
+  },
+  "homepage": "https://github.com/yourusername/ai-powered-dictionary#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Dictionary Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .test-section h2 {
+            margin-top: 0;
+            color: #555;
+        }
+        
+        .word-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .word-item {
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e1e5e9;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .word-item:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .instructions ul {
+            margin-bottom: 0;
+        }
+        
+        .instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI-Powered Dictionary Test Page</h1>
+    
+    <div class="instructions">
+        <h3>How to Test the Extension:</h3>
+        <ul>
+            <li>Make sure the AI-Powered Dictionary extension is installed and enabled</li>
+            <li>Double-click any word below to see the dictionary popup</li>
+            <li>Try the "Explain like I'm five" button (requires OpenAI API key)</li>
+            <li>Test with different types of words: simple, complex, technical, etc.</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Simple Words</h2>
+        <p>These are basic words that should have clear definitions and examples.</p>
+        <div class="word-list">
+            <div class="word-item">beautiful</div>
+            <div class="word-item">courage</div>
+            <div class="word-item">friendship</div>
+            <div class="word-item">adventure</div>
+            <div class="word-item">wisdom</div>
+            <div class="word-item">kindness</div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Complex Words</h2>
+        <p>These words are more challenging and should benefit from the "Explain like I'm five" feature.</p>
+        <div class="word-list">
+            <div class="word-item">ephemeral</div>
+            <div class="word-item">ubiquitous</div>
+            <div class="word-item">serendipity</div>
+            <div class="word-item">mellifluous</div>
+            <div class="word-item">perspicacious</div>
+            <div class="word-item">quintessential</div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Technical Terms</h2>
+        <p>These are technical or specialized terms that might need simple explanations.</p>
+        <div class="word-list">
+            <div class="word-item">algorithm</div>
+            <div class="word-item">photosynthesis</div>
+            <div class="word-item">democracy</div>
+            <div class="word-item">metamorphosis</div>
+            <div class="word-item">sustainability</div>
+            <div class="word-item">entrepreneur</div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Sample Paragraph</h2>
+        <p>You can also test the extension by double-clicking words in this paragraph. The <strong>magnificent</strong> sunset painted the sky with <em>vibrant</em> colors, creating an <strong>awe-inspiring</strong> spectacle that left everyone <em>speechless</em>. The <strong>serene</strong> atmosphere was <em>tranquil</em> and <strong>peaceful</strong>, perfect for <em>contemplation</em> and <strong>reflection</strong>.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Edge Cases</h2>
+        <p>Test these edge cases to ensure the extension handles them gracefully:</p>
+        <div class="word-list">
+            <div class="word-item">a</div>
+            <div class="word-item">I</div>
+            <div class="word-item">the</div>
+            <div class="word-item">supercalifragilisticexpialidocious</div>
+            <div class="word-item">hello123</div>
+            <div class="word-item">test-word</div>
+        </div>
+    </div>
+    
+    <script>
+        // Add click handlers to word items for easier testing
+        document.querySelectorAll('.word-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Simulate double-click by dispatching a double-click event
+                const event = new MouseEvent('dblclick', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                this.dispatchEvent(event);
+            });
+        });
+    </script>
+</body>
+</html>
